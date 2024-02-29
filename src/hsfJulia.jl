@@ -94,7 +94,8 @@ plain_val_data = copy(transpose(reshape(val_data[1], (50000, 3))))
 plain_val_labels = collect(transpose(reshape(val_data[2], (50000,))))
 
 accuracy = mean(Flux.isequal.(model(plain_val_data) .> 0.5, plain_val_labels))
-println("Validation accuracy: $accuracy")
+println("Validation accuracy: $accuracy") # Validation accuracy: 0.9831
+
 
 
 
